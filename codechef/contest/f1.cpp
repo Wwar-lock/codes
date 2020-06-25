@@ -236,6 +236,11 @@ void rotateLinkedList(struct ListNode **head,int k){
   pre->next = NULL;
 }
 
+void multiplyTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
+  struct ListNode *ans = NULL;
+  
+}
+
 // END LINKED LIST ---------------------
 
 // MISCELLANEOUS -----------------------
