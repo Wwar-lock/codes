@@ -252,6 +252,8 @@ void multiplyTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
   struct ListNode *ans = NULL;
   int carry=0,mul,num;
   int b = convertToNumber(head2);
+  // cout<<b<<el;
+  reverseLinkedList(&head1);
   while(head1){
     num = head1->val;
     mul = num * b + carry;
@@ -268,33 +270,6 @@ void multiplyTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
 
 // END LINKED LIST ---------------------
 
-// MISCELLANEOUS -----------------------
-
-int kadane(vi v){
-  int mx,curr;
-  mx=curr=0;
-  for(int i=0;i<v.size();i++){
-    curr+=v[i];
-    if(mx<curr){mx=curr;}
-    if(curr<0){curr=0;}
-  }
-  return mx;
-}
-
-int consecutiveOne(int n){
-  if(n<=1){
-    return n;
-  }
-  vi a(n,0),b(n,0);
-  a[0]=b[0]=1;
-  for(int i=1;i<n;i++){
-    a[i] = a[i-1]+b[i-1];
-    b[i]=a[i-1];
-  }
-  return a[n-1]+b[n-1];
-}
-
-// END MISCELLANEOUS -----------------
 
 signed main(){
 #ifndef ONLINE_JUDGE
