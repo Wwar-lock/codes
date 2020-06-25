@@ -236,9 +236,34 @@ void rotateLinkedList(struct ListNode **head,int k){
   pre->next = NULL;
 }
 
+int convertToNumber(struct ListNode *head){
+  reverseLinkedList(&head);
+  int base=1;
+  int ans=0;
+  while(head){
+    ans += base*head->val;
+    base *= 10;
+    head = head->next;
+  }
+  return ans;
+}
+
 void multiplyTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
   struct ListNode *ans = NULL;
-  
+  int carry=0,mul,num;
+  int b = convertToNumber(head2);
+  while(head1){
+    num = head1->val;
+    mul = num * b + carry;
+    carry = mul/10;
+    addListNode(&ans,mul%10);
+    head1 = head1->next;
+  }
+  if(carry!=0){
+    addListNode(&ans,carry);
+  }
+  reverseLinkedList(&ans);
+  printListNode(ans);
 }
 
 // END LINKED LIST ---------------------
@@ -290,23 +315,25 @@ signed main(){
     cin>>num;
     addListNode(&head1,num);
   }
-  rotateLinkedList(&head1,3);
+  // rotateLinkedList(&head1,3);
   // cout<<decimalVal(head1);
-  printListNode(head1);
+  // printListNode(head1);
 
   // struct ListNode *ans = reverseLinkedListInGroups(head1,2);
   // printListNode(ans);
 
-  // int m;
-  // cin>>m;
+  int m;
+  cin>>m;
 
-  // struct ListNode *head2 = NULL;
+  struct ListNode *head2 = NULL;
 
-  // for(int i=0;i<m;i++){
-  //   int num;
-  //   cin>>num;
-  //   addListNode(&head2,num);
-  // }
+  for(int i=0;i<m;i++){
+    int num;
+    cin>>num;
+    addListNode(&head2,num);
+  }
+
+  multiplyTwoLinkedList(head1,head2);
 
   // mergeTwoSortedList(head1,head2);
 
