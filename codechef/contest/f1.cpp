@@ -272,6 +272,8 @@ void subtractTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
   if(!head1 || !head2){return;}
   reverseLinkedList(&head1);
   reverseLinkedList(&head2);
+  // printListNode(head1);
+  // printListNode(head2);
   struct ListNode *ans = NULL;
   bool carry=false;
   while(head2){
@@ -286,7 +288,7 @@ void subtractTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
     }
     else{
       carry=true;
-      int v1=v1+10;
+      v1=v1+10;
       addListNode(&ans,v1-v2);
     }
     head2=head2->next;
