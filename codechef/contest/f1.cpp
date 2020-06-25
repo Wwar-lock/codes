@@ -252,7 +252,6 @@ void multiplyTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
   struct ListNode *ans = NULL;
   int carry=0,mul,num;
   int b = convertToNumber(head2);
-  // cout<<b<<el;
   reverseLinkedList(&head1);
   while(head1){
     num = head1->val;
@@ -263,6 +262,48 @@ void multiplyTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
   }
   if(carry!=0){
     addListNode(&ans,carry);
+  }
+  reverseLinkedList(&ans);
+  printListNode(ans);
+}
+
+void subtractTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
+  // assumption: value in head1>=head2
+  if(!head1 || !head2){return;}
+  reverseLinkedList(&head1);
+  reverseLinkedList(&head2);
+  struct ListNode *ans = NULL;
+  bool carry=false;
+  while(head2){
+    int v2 = head2->val;
+    int v1 = head1->val;
+    if(carry){
+      v1-=1;
+    }
+    if(v1>=v2){
+      carry=false;
+      addListNode(&ans,v1-v2);
+    }
+    else{
+      carry=true;
+      int v1=v1+10;
+      addListNode(&ans,v1-v2);
+    }
+    head2=head2->next;
+    head1=head1->next;
+  }
+  while(head1){
+    if(carry&&head1->val!=0){
+      carry=false;
+      addListNode(&ans,head1->val-1);
+    }
+    else if(carry&&head1->val==0){
+      addListNode(&ans,9);
+    }
+    else{
+      addListNode(&ans,head1->val);
+    }
+    head1 = head1->next;
   }
   reverseLinkedList(&ans);
   printListNode(ans);
@@ -308,7 +349,8 @@ signed main(){
     addListNode(&head2,num);
   }
 
-  multiplyTwoLinkedList(head1,head2);
+  subtractTwoLinkedList(head1,head2);
+  // multiplyTwoLinkedList(head1,head2);
 
   // mergeTwoSortedList(head1,head2);
 
