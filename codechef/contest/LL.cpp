@@ -311,6 +311,31 @@ void subtractTwoLinkedList(struct ListNode *head1,struct ListNode *head2){
   printListNode(ans);
 }
 
+void deleteNode(struct ListNode **head,int n){
+  if(*head==NULL){
+    return;
+  }
+  struct ListNode *tmp = *head,*pre=NULL;
+  while(tmp){
+    if(tmp->val==n){
+      break;
+    }
+    pre=tmp;
+    tmp=tmp->next;
+  }
+  if(pre==NULL){
+    *head=tmp->next;
+    return;
+  }
+  pre->next = tmp->next;
+  tmp->next=NULL;
+  free(tmp);
+}
+
+// TODO 
+// 1. Merge Sort in LL;
+// 2. Delete Nodes in LL;
+
 // END LINKED LIST ---------------------
 
 
@@ -335,23 +360,26 @@ signed main(){
   }
   // rotateLinkedList(&head1,3);
   // cout<<decimalVal(head1);
-  // printListNode(head1);
+  printListNode(head1);
+  int val=1;
+  deleteNode(&head1,val);
+  printListNode(head1);
 
   // struct ListNode *ans = reverseLinkedListInGroups(head1,2);
   // printListNode(ans);
 
-  int m;
-  cin>>m;
+  // int m;
+  // cin>>m;
 
-  struct ListNode *head2 = NULL;
+  // struct ListNode *head2 = NULL;
 
-  for(int i=0;i<m;i++){
-    int num;
-    cin>>num;
-    addListNode(&head2,num);
-  }
+  // for(int i=0;i<m;i++){
+  //   int num;
+  //   cin>>num;
+  //   addListNode(&head2,num);
+  // }
 
-  subtractTwoLinkedList(head1,head2);
+  // subtractTwoLinkedList(head1,head2);
   // multiplyTwoLinkedList(head1,head2);
 
   // mergeTwoSortedList(head1,head2);
