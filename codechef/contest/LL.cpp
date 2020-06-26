@@ -332,6 +332,50 @@ void deleteNode(struct ListNode **head,int n){
   free(tmp);
 }
 
+void splitList(struct ListNode *head,struct ListNode **a,struct ListNode **b){
+  // assumed that initial list doesnot contain any cycles :)
+  struct ListNode *slow,*fast;
+  slow = head;
+  fast = head->next;
+  while(fast){
+    fast = fast->next;
+    if(fast){
+      slow=slow->next;
+      fast=fast->next;
+    }
+  }
+  *a = head;
+  *b = slow->next;
+  slow->next=NULL;
+}
+
+struct ListNode *addSortedLists(struct ListNode *a,struct ListNode *b){
+  if(a==NULL){return b;}
+  if(b==NULL){return a;}
+  struct ListNode *res = NULL;
+  if(a->val<=b->val){
+    res = a;
+    res->next = addSortedLists(a->next,b);
+  }
+  else{
+    res = b;
+    res->next = addSortedLists(a,b->next);
+  }
+  return res;
+}
+
+void mergeSortLinkedList(struct ListNode **head1){
+  struct ListNode *head = *head1;
+  if(head==NULL||head->next==NULL){
+    return;
+  }
+  struct ListNode *a,*b;
+  splitList(head,&a,&b);
+  mergeSortLinkedList(&a);
+  mergeSortLinkedList(&b);
+  *head1 = addSortedLists(a,b);
+}
+
 // TODO 
 // 1. Merge Sort in LL;
 // 2. Delete Nodes in LL;
@@ -360,9 +404,10 @@ signed main(){
   }
   // rotateLinkedList(&head1,3);
   // cout<<decimalVal(head1);
-  printListNode(head1);
-  int val=1;
-  deleteNode(&head1,val);
+  // printListNode(head1);
+  // int val=1;
+  // deleteNode(&head1,val);
+  mergeSortLinkedList(&head1);
   printListNode(head1);
 
   // struct ListNode *ans = reverseLinkedListInGroups(head1,2);
