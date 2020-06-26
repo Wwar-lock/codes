@@ -54,6 +54,32 @@ void reverseString(string s){
   cout<<ans<<el;
 }
 
+void printReverseStack(stack<int>stk){
+  stack<int>tmp;
+  while(!stk.empty()){
+    tmp.push(stk.top());
+    stk.pop();
+  }
+  printStack(tmp);
+}
+
+void printBracketNumber(string s){
+  stack<int>stk;
+  int cnt=0;
+  int adder=1;
+  rep(i,s.size()){
+    if(s[i]=='('){
+      cnt+=1;
+      cout<<cnt<<" ";
+      stk.push(cnt);
+    }
+    if(s[i]==')'){
+      cout<<stk.top()<<" ";
+      stk.pop();
+    }
+  }
+}
+
 void sortStack(stack<int>&stk){
   stack<int>tmp;
   while(!stk.empty()){
@@ -79,17 +105,21 @@ signed main(){
   ios::sync_with_stdio(false);
   cin.tie(0), cout.tie(0);
 
-  srand(time(0));
+  string s;
+  cin>>s;
+  printBracketNumber(s);
 
-  int n=5;
-  stack<int>stk;
-  rep(i,n){
-    stk.push(rand()%10);
-  }
+  // srand(time(0));
 
-  printStack(stk);
-  sortStack(stk);
-  printStack(stk);
+  // int n=5;
+  // stack<int>stk;
+  // rep(i,n){
+  //   stk.push(rand()%10);
+  // }
+
+  // printStack(stk);
+  // sortStack(stk);
+  // printStack(stk);
 
   return 0;
 }
