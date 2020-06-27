@@ -33,6 +33,8 @@ using namespace std;
 
 // STACK IMPLEMENTATION ---------------------
 
+int minEle = INT_MAX;
+
 void printStack(stack<int>stk){
   while(!stk.empty()){
     cout<<stk.top()<<" ";
@@ -94,6 +96,76 @@ void sortStack(stack<int>&stk){
   printStack(tmp);
 }
 
+bool isFull(stack<int>stk,int n){
+  if(stk.size()==n){
+    return true;
+  }
+  return false;
+}
+
+bool isEmpty(stack<int>stk){
+  if(stk.size()==0){
+    return true;
+  }
+  return false;
+}
+
+void specialPush(stack<int>*stk,int x){
+  if(stk->empty()){
+    minEle = x;
+    stk->push(x);
+    return;
+  }
+  if(x<minEle){
+    stk->push(2*x-minEle);
+    minEle = x;
+  }
+  else{
+    stk->push(x);
+  }
+  return;
+}
+
+int getMin(stack<int>stk){
+  if(stk.empty()){
+    return 0;
+  }
+  return minEle;
+}
+
+void specialPop(stack<int>*stk){
+  if(stk->size()==0){
+    return;
+  }
+  int tmp = stk->top();
+  stk->pop();
+  if(tmp>=minEle){
+    cout<<tmp<<el;
+    return;
+  }
+  else{
+    cout<<minEle<<el;
+    minEle = 2*minEle-tmp;
+    return;
+  }
+}
+
+void specialStack(){
+  // all operations in O(1)
+  // operations are : 
+  // 1. Push
+  // 2. Pop
+  // 3. getMin
+  stack<int>stk;
+  for(int i=0;i<5;i++){
+    int num;cin>>num;
+    specialPush(&stk,num);
+  }
+  // printStack(stk);
+  int minE = getMin(stk);
+  cout<<minE<<el;
+}
+
 // END STACK IMPLEMENTATION --------------------------
 
 signed main(){
@@ -105,9 +177,10 @@ signed main(){
   ios::sync_with_stdio(false);
   cin.tie(0), cout.tie(0);
 
-  string s;
-  cin>>s;
-  printBracketNumber(s);
+  specialStack();
+  // string s;
+  // cin>>s;
+  // printBracketNumber(s);
 
   // srand(time(0));
 
