@@ -70,15 +70,13 @@ signed main(){
     }
     // break;
     vector<pair<int,int>>vp; // <sum,bit_number>
-    for(int i=0;i<=30;i++){
+    for(int i=0;i<32;i++){
       int cnt=0;
       for(int j=0;j<n;j++){
         cnt+=btset[j].test(i);
       }
-      if(cnt!=0){
-        int msum = cnt*calPow(2,i);
-        vp.pb({msum,i});
-      }
+      int msum = cnt*calPow(2,i);
+      vp.pb({msum,i});
     }
     sort(all(vp),cmp);
     int ans=0;
