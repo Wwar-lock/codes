@@ -166,6 +166,49 @@ void specialStack(){
   cout<<minE<<el;
 }
 
+int prec(char c){
+  if(c=='^'){return 3;}
+  if(c=='*'||c=='/'){return 2;}
+  if(c=='+'||c=='-'){return 1;}
+  return -1;
+}
+
+void intfixToPostfix(string s){
+  stack<char>stk;
+  stk.push('$');
+  string ans="";
+  for(int i=0;i<s.size();i++){
+    if((s[i]>='a'&&s[i]<='z')||(s[i]>='A'&&s[i]<='Z')){
+      ans+=s[i];
+    }
+    else if(s[i]=='('){
+      stk.push(s[i]);
+    }
+    else if(s[i]==')'){
+      while(stk.top()!='$'&&stk.top()!='('){
+        char c = stk.top();
+        ans+=c;
+        stk.pop();
+      }
+      if(stk.top()=='('){
+        stk.pop();  
+      }
+    }
+    else{
+      while(stk.top()!='$'&&prec(s[i])<=prec(stk.top())){
+        ans+=stk.top();
+        stk.pop();
+      }
+      stk.push(s[i]);
+    }
+  }
+  while(stk.top()!='$'){
+    ans+=stk.top();
+    stk.pop();
+  }
+  cout<<ans<<el;
+}
+
 // END STACK IMPLEMENTATION --------------------------
 
 signed main(){
@@ -177,7 +220,10 @@ signed main(){
   ios::sync_with_stdio(false);
   cin.tie(0), cout.tie(0);
 
-  specialStack();
+  string s;
+  cin>>s;
+  intfixToPostfix(s);
+  // specialStack();
   // string s;
   // cin>>s;
   // printBracketNumber(s);
