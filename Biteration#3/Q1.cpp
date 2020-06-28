@@ -31,46 +31,52 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
-struct Node{
-	int stb;
-	int tys;
-	int roll;
-};
-
-bool cmp(struct Node &a,struct Node &b){
-	if(a.tys==b.tys&&a.stb==b.stb){
-		return a.roll>b.roll;
-	}
-	if(a.tys==b.tys){
-		return a.stb>b.stb;
-	}
-	return a.tys<b.tys;
-}
 
 signed main(){
 #ifndef ONLINE_JUDGE
-	freopen("input.txt","r", stdin);
-	freopen("output.txt","w", stdout);
+  freopen("input.txt","r", stdin);
+  freopen("output.txt","w", stdout);
 #endif
 
-	ios::sync_with_stdio(false);
-	cin.tie(0), cout.tie(0);
+  ios::sync_with_stdio(false);
+  cin.tie(0), cout.tie(0);
 
+  int t;
+  cin>>t;
+  vi v;
+  v.pb(1); //a
+  v.pb(5); //e
+  v.pb(9); //i
+  v.pb(15); //o
+  v.pb(21); //u
+  map<char,int>mp;
+  char c = 'a';
+  for(int i=1;i<=26;i++){
+    // cout<<c<<el;
+    mp[c]=i;
+    c++;
+  }
+  wl(t--){
+    string s;
+    cin>>s;
+    int cost=0;
+    rep(i,s.size()){
+      if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'){
+        continue;
+      }
+      else{
+        int mn = INT_MAX;
+        rep(j,v.size()){
+          if(abs(mp[s[i]]-v[j])<mn){
+            mn = abs(mp[s[i]]-v[j]);
+          }
+        }
+        // cout<<mn<<el;
+        cost+=mn;
+      }
+    }
+    cout<<cost<<el;
+  }
 
-	int n;
-	cin>>n;vector<struct Node>v(n);
-	rep(i,n){
-		int x,y;
-		cin>>x>>y;
-		v[i].roll = i+1;
-		v[i].stb = x;
-		v[i].tys = y;
-	}
-	sort(all(v),cmp);
-	rep(i,n){
-		cout<<v[i].roll <<" ";
-	}
-	cout<<el;
-
-	return 0;
+  return 0;
 }
