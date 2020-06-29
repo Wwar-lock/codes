@@ -376,10 +376,10 @@ void mergeSortLinkedList(struct ListNode **head1){
   *head1 = addSortedLists(a,b);
 }
 
-// TODO 
-// 1. Merge Sort in LL;
-// 2. Delete Nodes in LL;
-
+void  printInReverse(struct ListNode *head){
+  reverseLinkedList(&head);
+  printListNode(head);
+}
 // END LINKED LIST ---------------------
 
 
