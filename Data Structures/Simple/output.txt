@@ -1,4 +1,7 @@
 5
-1 2 3 4 8 
+1 2 3 4 5 
 Minimum: 1
-Leaf Nodes Sum: 10
+Leaf Nodes Sum: 7
+Number  of Nodes in range 2,4 are: 3
+3rd Smallest value: 3
+2nd Largest value: 4

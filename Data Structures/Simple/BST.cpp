@@ -44,6 +44,22 @@ void inorderTraversal(struct TreeNode *root){
   }
 }
 
+void preTraversal(struct TreeNode *root){
+  if(root){
+    cout<<root->val<<" ";
+    inorderTraversal(root->left);
+    inorderTraversal(root->right);
+  }
+}
+
+void postTraversal(struct TreeNode *root){
+  if(root){
+    inorderTraversal(root->left);
+    inorderTraversal(root->right);
+    cout<<root->val<<" ";
+  }
+}
+
 struct TreeNode *getNode(int x){
   struct TreeNode *tmp = (struct TreeNode*)malloc(sizeof(struct TreeNode));
   tmp->val=x;
@@ -110,7 +126,40 @@ struct TreeNode *LCA(struct TreeNode *root,int x,int y){
   return root;
 }
 
+void countNodesInGivenRange(struct TreeNode *root,int l,int r,int *count){
+  if(!root){
+    return;
+  }
+  if(root->val>=l&&root->val<=r){
+    *count+=1;
+  }
+  countNodesInGivenRange(root->left,l,r,count);
+  countNodesInGivenRange(root->right,l,r,count);
+}
 
+void getKthSmallest(struct TreeNode *root,int *count,int *ans,int k){
+  if(root){
+    getKthSmallest(root->left,count,ans,k);
+    *count+=1;
+    if(*count==k){
+      *ans=root->val;
+      return;
+    }
+    getKthSmallest(root->right,count,ans,k);
+  }
+}
+
+void getKthLargest(struct TreeNode *root,int *count,int *ans,int k){
+  if(root){
+    getKthLargest(root->left,count,ans,k);
+    if(*count==k){
+      *ans=root->val;
+      return;
+    }
+    *count-=1;
+    getKthLargest(root->right,count,ans,k);
+  }
+}
 //   3
 //  /  \
 // 1    4
@@ -142,6 +191,18 @@ signed main(){
   int sum=0;
   getLeafSum(root,&sum);
   cout<<"Leaf Nodes Sum: "<<sum<<el;
+  int count=0;
+  countNodesInGivenRange(root,2,4,&count);
+  cout<<"Number  of Nodes in range 2,4 are: "<<count<<el;
+
+  int ans;
+  count=0;
+  getKthSmallest(root,&count,&ans,3);
+  cout<<"3rd Smallest value: "<<ans<<el;
+
+  count=n;
+  getKthLargest(root,&count,&ans,2);
+  cout<<"2nd Largest value: "<<ans<<el;
 
   return 0;
 }
