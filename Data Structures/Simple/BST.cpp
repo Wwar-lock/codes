@@ -65,6 +65,57 @@ struct TreeNode* addNode(struct TreeNode *root,int x){
   return root;
 }
 
+int getMin(struct TreeNode *root){
+  struct TreeNode *t = root;
+  while(t->left!=NULL){
+    t=t->left;
+  }
+  return t->val;
+}
+
+void getLeafSum(struct TreeNode *root,int *sum){
+  if(!root){
+    return;
+  }
+  if(!root->left&&!root->right){
+    *sum += root->val;
+  }
+  getLeafSum(root->left,sum);
+  getLeafSum(root->right,sum);
+}
+
+struct TreeNode *searchVal(struct TreeNode *root,int x){
+  if(root==NULL||root->val==x){
+    return root;
+  }
+  if(root->val>x){
+    return searchVal(root->left,x);
+  }
+  else{
+    return searchVal(root->right,x);
+  }
+}
+
+struct TreeNode *LCA(struct TreeNode *root,int x,int y){
+  // it is assumed that both x and y values are present in tree
+  if(!root){
+    return NULL;
+  }
+  if(root->val>x&&root->val>y){
+    return LCA(root->left,x,y);
+  }
+  if(root->val<x&&root->val<y){
+    return LCA(root->left,x,y);
+  }
+  return root;
+}
+
+
+//   3
+//  /  \
+// 1    4
+//  \    \
+//   2    5
 
 signed main(){
 #ifndef ONLINE_JUDGE
@@ -86,6 +137,11 @@ signed main(){
   cout<<n<<el;
   inorderTraversal(root);
   cout<<el;
+
+  cout<<"Minimum: "<<getMin(root)<<el;
+  int sum=0;
+  getLeafSum(root,&sum);
+  cout<<"Leaf Nodes Sum: "<<sum<<el;
 
   return 0;
 }
