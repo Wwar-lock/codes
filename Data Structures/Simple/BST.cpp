@@ -160,6 +160,64 @@ void getKthLargest(struct TreeNode *root,int *count,int *ans,int k){
     getKthLargest(root->right,count,ans,k);
   }
 }
+
+bool existSumUtil(struct TreeNode *root,int sum){
+  stack<struct TreeNode *> it1;
+  stack<struct TreeNode *> it2;
+  struct TreeNode *tmp = root;
+  while(!tmp){
+    it1.push(tmp->val);
+    tmp=tmp->left;
+  }
+  tmp=root;
+  while(!tmp){
+    it2.push(tmp->val);
+    tmp=tmp->right;
+  }
+  while(it1.size()&&it2.size()){
+    int v1=it1.top()->val;
+    int v2=it2.top()->val;
+    if(v1+v2){
+      return true;
+    }
+    if(v1>v2){
+      return false;
+    }
+    if(v1+v2<sum){
+      tmp = it1.top()->right;
+      it1.pop();
+      while(tmp){
+        it1.push(tmp);
+        tmp=tmp->left;
+      }
+      else{
+        tmp = it2.top()->left;
+        it2.pop();
+        while(tmp){
+          it2.push(tmp);
+          tmp = tmp->right;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+bool existSum(struct TreeNode *root,struct TreeNode *curr, int sum){
+  if(!curr){
+    return false;
+  }
+  return existSumUtil(root,sum)||existSum(root,curr->left,sum)||existSum(root,curr->right,sum);
+}
+
+void tripletSum(struct TreeNode *root,int sum){
+  if(existSum(root,root,sum)){
+    cout<<"Yes\n";
+  }
+  else{
+    cout<<"No\n";
+  }
+}
 //   3
 //  /  \
 // 1    4
