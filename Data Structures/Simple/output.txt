@@ -5,3 +5,5 @@ Leaf Nodes Sum: 7
 Number  of Nodes in range 2,4 are: 3
 3rd Smallest value: 3
 2nd Largest value: 4
+Sum of K Smallest elements: 10
+Yes

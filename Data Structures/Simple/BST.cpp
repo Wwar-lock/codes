@@ -31,6 +31,8 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
+int MIN = -100005;
+
 struct TreeNode{
   int val;
   struct TreeNode *left,*right;
@@ -166,12 +168,12 @@ bool existSumUtil(struct TreeNode *root,int sum){
   stack<struct TreeNode *> it2;
   struct TreeNode *tmp = root;
   while(!tmp){
-    it1.push(tmp->val);
+    it1.push(tmp);
     tmp=tmp->left;
   }
   tmp=root;
   while(!tmp){
-    it2.push(tmp->val);
+    it2.push(tmp);
     tmp=tmp->right;
   }
   while(it1.size()&&it2.size()){
@@ -190,6 +192,7 @@ bool existSumUtil(struct TreeNode *root,int sum){
         it1.push(tmp);
         tmp=tmp->left;
       }
+    }
       else{
         tmp = it2.top()->left;
         it2.pop();
@@ -198,7 +201,6 @@ bool existSumUtil(struct TreeNode *root,int sum){
           tmp = tmp->right;
         }
       }
-    }
   }
   return false;
 }
@@ -217,6 +219,29 @@ void tripletSum(struct TreeNode *root,int sum){
   else{
     cout<<"No\n";
   }
+}
+
+void sumOfKSmallestElements(struct TreeNode *root,int *sum,int k,int *count){
+  if(root){
+    sumOfKSmallestElements(root->left,sum,k,count);
+    *count+=1;
+    if(*count<=k){
+      *sum+=root->val;
+    }
+    sumOfKSmallestElements(root->right,sum,k,count);
+  }
+}
+
+;
+
+bool checkBST(struct TreeNode *root,int mn,int mx){
+  if(!root){
+    return true;
+  }
+  if(root->val>mx&&root->val<mn){
+    return false;
+  }
+  return checkBST(root->left,mn,root->val)&&checkBST(root->right,root->val,mx);
 }
 //   3
 //  /  \
@@ -261,6 +286,22 @@ signed main(){
   count=n;
   getKthLargest(root,&count,&ans,2);
   cout<<"2nd Largest value: "<<ans<<el;
+
+  count=0;
+  sum=0;
+  int k=4;
+  sumOfKSmallestElements(root,&sum,k,&count);
+  cout<<"Sum of K Smallest elements: "<<sum<<el;
+
+  int mn = -100005;
+  int mx = 100005;
+
+  if(checkBST(root,mn,mx)){
+    cout<<"Yes\n";
+  }
+  else{
+    cout<<"No\n";
+  }
 
   return 0;
 }
