@@ -232,8 +232,6 @@ void sumOfKSmallestElements(struct TreeNode *root,int *sum,int k,int *count){
   }
 }
 
-;
-
 bool checkBST(struct TreeNode *root,int mn,int mx){
   if(!root){
     return true;
