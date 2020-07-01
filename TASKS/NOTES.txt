@@ -1,6 +1,6 @@
 TOPICS                            IMPORTANCE                                    STATUS                 
 
-1. DBMS                              HIGH
+1. DBMS                              HIGH                                     IN PROGRESS..
 2. OOM                               HIGH
 3. OS                                MEDIUM
 4. DATA STRUCTURES	                 HIGH                                     C0MPLETED     
@@ -15,5 +15,22 @@ TOPICS                            IMPORTANCE                                    
 2. PRE-PREPARED ANSWERS
 -----------------------------------------
 
-
-
+1. DataBase Management System:  
+  (a) Functional Dependecies and Keys:
+              i.    a->b; if we have a we can search b. a=determinant; b=dependent; 
+              ii.   trivial;(have no use b subset of a) and non-trivial;(useful, b is not subset of a) Dependecies;
+              iii.  closure set of attributes: if closure contains all elements then it will be candidate key;
+                    equivalence relation
+              iv.   canonical form: if your presence doesn't change system the u are redundant;
+              v.    primary key is selected by user from pool of candidate keys;
+              vi.   foreign key: it is an attribute or set of attributes that ref, to primary key of same or 
+                    another table;
+                    a table can have multiple foreign keys
+                    concept of foreign key:-> referntial integrity: amazon-flipkart example with Ram college counter eg.
+                    if we delete some data entry from base table this may cause voilation : 
+                      ondeletecascade-> automatically delete from all refrencing table (most important)
+                      ondeletesetNULL-> automatically put NULL at FK     
+                    if we update some entry in base table then voilation may occur but we apply same ways to get rid of.   
+  (b) Normalisation
+  (c) Indexing and physical STRUCTURES
+  (d) Transactions 
