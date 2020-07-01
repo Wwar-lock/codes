@@ -73,6 +73,46 @@ void dijkstra(list<pair<int,int>> *adj,int source,int n){
   cout<<el;
 }
 
+bool safe(int x,int y,int n){
+  return (x>=0&&x<n&&y>=0&&y<n);
+}
+
+bool whetherPathExists(vector<vector<int>>v){
+  bool f = false;
+  int n = v.size();
+  queue<pair<int,int>>q;
+  for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+      if(v[i][j]==1){
+        q.push({i,j});
+      }
+    }
+  }
+  vector<int>dx{-1,0,1,0};
+  vector<int>dy{0,1,0,-1};
+  while(!q.empty()){
+    if(f){break;}
+    pair<int,int>p = q.front();
+    q.pop();
+    int x = p.ff;
+    int y = p.ss;
+    for(int i=0;i<4;i++){
+      int nx = x+dx[i];
+      int ny = y+dy[i];
+      if(safe(nx,ny,n)){
+        if(v[nx][ny]==2){
+          f=true;
+          break;
+        }
+        if(v[nx][ny]==3){
+          q.push({nx,ny});
+        }
+      }
+    }
+  }
+  return f;
+}
+
 signed main(){
 #ifndef ONLINE_JUDGE
   freopen("input.txt","r", stdin);
@@ -84,25 +124,44 @@ signed main(){
 
   int n;
   cin>>n;
-  // vector<vector<int>>adj(n,vector<int>(n,0));
-  list<pair<int,int>>*adj;
-  adj = new list<pair<int,int>>[n];
-  memset(adj,0,sizeof(adj));
-  int m;
-  cin>>m;
-  rep(i,m){
-    int a,b,w;
-    cin>>a>>b>>w;
-    adj[a].pb({b,w});
-    adj[b].pb({a,w});
-    // adj[b][a] = adj[a][b] = 1;
+
+  // whether path exist or not ;
+  vector<vector<int>>v(n,vector<int>(n,0));
+  for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+      int num;
+      cin>>num;
+      v[i][j]=num;
+    }
   }
+  // 3 0 0 0
+  // 0 3 3 0
+  // 0 1 0 3
+  // 0 2 3 3
+  if(whetherPathExists(v)){
+    cout<<"Yes\n";
+  }
+  else{
+    cout<<"No\n";
+  }
+  // vector<vector<int>>adj(n,vector<int>(n,0));
+  // list<pair<int,int>>*adj;
+  // adj = new list<pair<int,int>>[n];
+  // memset(adj,0,sizeof(adj));
+  // int m;
+  // cin>>m;
+  // rep(i,m){
+  //   int a,b,w;
+  //   cin>>a>>b>>w;
+  //   adj[a].pb({b,w});
+  //   adj[b].pb({a,w});
+  // }
   // printMatrix(adj);
   // by using adjacency matrix complexity is much hiher
   // so we use list instead of 2d matrix
   // printList(adj,n);
   // implementing dijkstra Algo
-  dijkstra(adj,0,n);
+  // dijkstra(adj,0,n);
 
   return 0;
 }
