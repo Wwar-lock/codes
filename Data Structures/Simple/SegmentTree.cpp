@@ -31,6 +31,9 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
+// updation complexity is : O(log(n))
+// query complexity is : O(log(n))
+
 int getMid(int i,int j){
   return i+(j-i)/2;
 }
@@ -51,6 +54,28 @@ int *contructSegmentTree(vi v){
   int *st = new int[mx_size];
   constructUtilFunction(v,0,v.size()-1,st,0);
   return st;
+}
+
+void updateUtilFunction(int *st,int ss,int se,int id,int diff,int si){
+  if(id<ss||id>se){
+    return;
+  }
+  st[si]+=diff;
+  if(ss!=se){
+    int mid = getMid(ss,se);
+    updateUtilFunction(st,ss,mid,id,diff,2*si+1);
+    updateUtilFunction(st,ss,mid,id,diff,2*si+2);
+  }
+}
+
+void updateValue(vi v,int *st,int size,int id,int val){
+  if(id<0||id>size-1){
+    cout<<"Invalid";
+    return;
+  }
+  int diff = val-v[id];
+  v[id] = val;
+  updateUtilFunction(st,0,size-1,id,diff,0);
 }
 
 int getSumUtil(int *st,int ss,int se,int qs,int qe,int si){
@@ -92,6 +117,9 @@ signed main(){
 
   int sum = getSum(st,2,4,v.size());
   cout<<"sum (2,4): "<<sum<<el;
+
+  updateValue(v,st,v.size(),2,9);
+  cout<<getSum(st,2,4,v.size())<<el;
 
   return 0;
 }
