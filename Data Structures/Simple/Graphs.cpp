@@ -80,6 +80,7 @@ bool safe(int x,int y,int n){
 bool whetherPathExists(vector<vector<int>>v){
   bool f = false;
   int n = v.size();
+  set<pair<int,int>>st;
   queue<pair<int,int>>q;
   for(int i=0;i<n;i++){
     for(int j=0;j<n;j++){
@@ -88,6 +89,9 @@ bool whetherPathExists(vector<vector<int>>v){
       }
     }
   }
+  pair<int,int>t = q.front();
+  // cout<<t.ff<<" "<<t.ss<<" "<<v[t.ff][t.ss]<<el;
+  st.insert(t);
   vector<int>dx{-1,0,1,0};
   vector<int>dy{0,1,0,-1};
   while(!q.empty()){
@@ -101,11 +105,14 @@ bool whetherPathExists(vector<vector<int>>v){
       int ny = y+dy[i];
       if(safe(nx,ny,n)){
         if(v[nx][ny]==2){
+          // cout<<nx<<" "<<ny<<" "<<v[nx][ny]<<el;
           f=true;
           break;
         }
-        if(v[nx][ny]==3){
+        if(v[nx][ny]==3&&st.find({nx,ny})==st.end()){
+          // cout<<nx<<" "<<ny<<" "<<v[nx][ny]<<el;
           q.push({nx,ny});
+          st.insert({nx,ny});
         }
       }
     }
