@@ -39,6 +39,13 @@ TOPICS                            IMPORTANCE                                    
               v.    2NF -> Do not have any partial dependencies;
               vi.   3Nf -> Do not have any transitive dependency;
               vii.  BCNF -> if a->b then a must be a super key; nonprime->prime not allowed;
-              
-  (c) Indexing and physical STRUCTURES
-  (d) Transactions 
+  (c) Indexing:
+              i.   file is stored in blocks;
+              ii.  blocks may be sorted or maynot be;
+              iii. make a additional table stores index and block pointers;
+              iv.  types of indexing: primary -> used when file is sorted and selected attr. is primary key;
+                          ,cluster -> used when file is sorted and selected attr. is not  primary key
+                          ,secondary -> non sorted file data; but index is sorted 
+                          ,multilevel indexing -> using b+ trees;
+  (d) Physical STRUCTURES
+  (e) Transactions 
