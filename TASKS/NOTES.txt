@@ -1,14 +1,15 @@
 TOPICS                            IMPORTANCE                                    STATUS                 
 
-1. DBMS                              HIGH                                     IN PROGRESS..
-2. OOM                               HIGH
-3. OS                                MEDIUM
-4. DATA STRUCTURES                   HIGH                                     C0MPLETED     
-5. SOFTWARE MODELS                   MEDIUM 
-6. COMPUTER ARHITECTURE              MEDIUM
-7. NETWORKS                          HIGH
-8. ARTIFICAL INTELLIGENCE            MEDIUM
-9. DESIGN ALGORITHMS                 HIGH                                     COMPLETED
+1.  DBMS                              HIGH                                     IN PROGRESS..
+2.  OOM                               HIGH
+3.  OS                                MEDIUM
+4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
+5.  SOFTWARE MODELS                   MEDIUM 
+6.  COMPUTER ARHITECTURE              MEDIUM
+7.  NETWORKS                          HIGH
+8.  ARTIFICAL INTELLIGENCE            MEDIUM
+9.  DESIGN ALGORITHMS                 HIGH                                     COMPLETED
+10. Distributed Systems               HIGH
 
 -----------------------------------------
 1. PROJECTS AND GITHUB
@@ -47,5 +48,9 @@ TOPICS                            IMPORTANCE                                    
                           ,cluster -> used when file is sorted and selected attr. is not  primary key
                           ,secondary -> non sorted file data; but index is sorted 
                           ,multilevel indexing -> using b+ trees;
-  (d) Physical STRUCTURES
-  (e) Transactions 
+  (d) Query Optimisation: 
+              i.   A set of equivalence rules is said to be minimal if no rule can be derived from any 
+                   combination of the others. A query is said to be optimal when it is minimal.
+              ii.  Do selection process as early as possible as it reduces search space for joins "EARLY SELECTION !!"
+  (e) Transactions:
+              i.  ACID PR
