@@ -1,7 +1,7 @@
 TOPICS                            IMPORTANCE                                    STATUS                 
 
-1.  DBMS                              HIGH                                     IN PROGRESS..
-2.  OOM                               HIGH
+1.  DBMS                              HIGH                                     COMPLETED
+2.  OOM                               HIGH                                     IN PROGRESS...
 3.  OS                                MEDIUM
 4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
 5.  SOFTWARE MODELS                   MEDIUM 
@@ -16,7 +16,8 @@ TOPICS                            IMPORTANCE                                    
 2. PRE-PREPARED ANSWERS
 -----------------------------------------
 
-1. DataBase Management System:  
+1. DataBase Management System: 
+
   (a) Functional Dependecies and Keys:
               i.    a->b; if we have a we can search b. a=determinant; b=dependent; 
               ii.   trivial;(have no use b subset of a) and non-trivial;(useful, b is not subset of a) Dependecies;
@@ -57,3 +58,6 @@ TOPICS                            IMPORTANCE                                    
               ii.  Advantages of concurrency : resource sharing, fast
               iii. Dirty Read, Unrepeatable read, Lost Update, Phantom Read.
               iv.  Conflict Serializability.
+
+2. Object Oriented Methodology:  
+
