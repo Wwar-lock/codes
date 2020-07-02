@@ -53,4 +53,7 @@ TOPICS                            IMPORTANCE                                    
                    combination of the others. A query is said to be optimal when it is minimal.
               ii.  Do selection process as early as possible as it reduces search space for joins "EARLY SELECTION !!"
   (e) Transactions:
-              i.  ACID PR
+              i.   ACID properties Atomicity,Concurrency, Isolation, Durability;
+              ii.  Advantages of concurrency : resource sharing, fast
+              iii. Dirty Read, Unrepeatable read, Lost Update, Phantom Read.
+              iv.  Conflict Serializability.
