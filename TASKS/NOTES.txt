@@ -3,7 +3,7 @@ TOPICS                            IMPORTANCE                                    
 1. DBMS                              HIGH                                     IN PROGRESS..
 2. OOM                               HIGH
 3. OS                                MEDIUM
-4. DATA STRUCTURES	                 HIGH                                     C0MPLETED     
+4. DATA STRUCTURES                   HIGH                                     C0MPLETED     
 5. SOFTWARE MODELS                   MEDIUM 
 6. COMPUTER ARHITECTURE              MEDIUM
 7. NETWORKS                          HIGH
@@ -31,6 +31,14 @@ TOPICS                            IMPORTANCE                                    
                       ondeletecascade-> automatically delete from all refrencing table (most important)
                       ondeletesetNULL-> automatically put NULL at FK     
                     if we update some entry in base table then voilation may occur but we apply same ways to get rid of.   
-  (b) Normalisation
+  (b) Normalisation:
+              i.    technique to organize data into multiple tables, to minimize the data redundancy;
+              ii.   Redundant data produce anomalies in insertion, updation and deletion;
+              iii.  types are : 1NF,2NF,3NF,BCNF,4NF,5NF
+              iv.   1nf -> Data Atomicity;
+              v.    2NF -> Do not have any partial dependencies;
+              vi.   3Nf -> Do not have any transitive dependency;
+              vii.  BCNF -> if a->b then a must be a super key; nonprime->prime not allowed;
+              
   (c) Indexing and physical STRUCTURES
   (d) Transactions 
