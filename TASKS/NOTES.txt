@@ -61,3 +61,36 @@ TOPICS                            IMPORTANCE                                    
 
 2. Object Oriented Methodology:  
 
+  (a) CONCEPTS:
+              i.   Classes and Objects:
+                          It is the basic concept of OOP; an extended concept of the structure used in C. 
+                          It is an abstract and user-defined data type.
+
+              ii.  Inheritance:
+                          Inheritance is the ability of one class to inherit capabilities or properties of another class, called the parent class. 
+                          When we write a class, we inherit properties from other classes. 
+                          So when we create a class, we do not need to write all the properties and functions again and again, 
+                          as these can be inherited from another class which possesses it. 
+                          Inheritance allows the user to reuse the code whenever possible and reduce its redundancy.
+                                        
+              iii. Data Abstraction:
+                          Abstraction refers to the act of representing important and special features without 
+                          including the background details or explanation about that feature. Data abstraction simplifies database design.
+                          -> Physical Level
+                          -> logical Level
+                          -> User Level
+
+              iv.  Encapsulation:
+                          Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of wrapping data and the methods that work on data within one unit, e.g., a class in Java. 
+                          This concept is often used to hide the internal state representation of an object from the outside.
+
+              v.   Polymorphism:
+                          Polymorphism is the ability of data to be processed in more than one form.
+                          -> method Overloading
+                          -> method Overridding
+                          -> virtual Function
+
+  (b) Approach: 
+              Object-oriented programming (OOP) is nothing but that which 
+              allows the writing of programs with the help of certain classes and real-time objects.
+
