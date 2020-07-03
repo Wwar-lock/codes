@@ -31,6 +31,15 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
+int findSum(int x){
+  int s=0;
+  while(x){
+    int r = x%10;
+    s+=r;
+    x=x/10;
+  }
+  return s;
+}
 
 signed main(){
 #ifndef ONLINE_JUDGE
@@ -46,14 +55,37 @@ signed main(){
   wl(t--){
     int n;
     cin>>n;
-    vi v(n);
-    rep(i,n){cin>>v[i];}
-    int cnt=0;
-    rep(i,n-1){
-      int d = abs(v[i+1]-v[i])-1;
-      cnt+=d;
+    vi a(n),b(n);
+    rep(i,n){
+      cin>>a[i]>>b[i];
     }
-    cout<<cnt<<el;
+    int ca=0,cb=0;
+    rep(i,n){
+      int sa = findSum(a[i]);
+      int sb = findSum(b[i]);
+      // cout<<sa<<" "<<sb<<el;
+      if(sa==sb){
+        ca++;cb++;continue;
+      }
+      if(sa>sb){
+        ca++;
+        continue;
+      }
+      if(sa<sb){
+        cb++;
+        continue;
+      }
+    }
+    if(ca==cb){
+      cout<<2<<" "<<ca<<el;continue;
+    }
+    if(ca>cb){
+      cout<<0<<" "<<ca<<el;continue;
+    }
+    if(ca<cb){
+      cout<<1<<" "<<cb<<el;continue;
+    }
+
   }
 
   return 0;
