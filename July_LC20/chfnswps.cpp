@@ -31,13 +31,6 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
-void printV(vi v){
-  for(int i=0;i<v.size();i++){
-    cout<<v[i]<<" ";
-  }
-  cout<<el;
-}
-
 
 signed main(){
 #ifndef ONLINE_JUDGE
@@ -51,31 +44,41 @@ signed main(){
   int t;
   cin>>t;
   wl(t--){
-    int n;cin>>n;
+    int n;
+    cin>>n;
     map<int,int>mp;
+    set<int>st;
     vi a(n),b(n);
-    rep(i,n){cin>>a[i];mp[a[i]]++;}
-    rep(i,n){cin>>b[i];mp[b[i]]++;}
+    map<int,int>ma,mb;
+    rep(i,n){cin>>a[i];mp[a[i]]++;st.insert(a[i]);ma[a[i]]++;}
+    rep(i,n){cin>>b[i];mp[b[i]]++;st.insert(b[i]);mb[a[i]]++;}
     bool f=true;
     for(auto it=mp.begin();it!=mp.end();it++){
       if(it->ss%2==1){
-        f=false;break;
+        f=false;
+        break;
       }
     }
-    if(!f){cout<<-1<<el;continue;}
-    map<int,int>ma,mb;
-    set<int>st;
-    rep(i,n){ma[a[i]]++;st.insert(a[i]);}
-    rep(i,n){mb[b[i]]++;st.insert(b[i]);}
-    vi tmp;
-    for(auto it=st.begin();it!=st.end();it++){
-      tmp.pb(*it);
+    if(!f){
+      cout<<-1<<el;
+      continue;
     }
+    mp.clear();
+    vi v,tmp;
+    for(auto it=st.begin();it!=st.end();it++){
+      if(ma[*it]!=mb[*it]){
+        tmp.pb(*it);
+      }
+      v.pb(*it);
+    }
+    int mn = *min_element(all(v));
+    v.clear();
+    // cout<<mn<<el;
     int cost=0;
     int s=0,e=tmp.size()-1;
-    while(s<e){
-      
-    }
+    // code
+    
+    cout<<cost<<el;
   }
 
   return 0;

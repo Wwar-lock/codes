@@ -72,6 +72,8 @@ TOPICS                            IMPORTANCE                                    
                           So when we create a class, we do not need to write all the properties and functions again and again, 
                           as these can be inherited from another class which possesses it. 
                           Inheritance allows the user to reuse the code whenever possible and reduce its redundancy.
+                          **C++ able to perform multiple Inheritance but not other languages because it is error prone!!
+                          **Diamond problem of Inheritance. Causes Ambiguities in child class object.
                                         
               iii. Data Abstraction:
                           Abstraction refers to the act of representing important and special features without 
@@ -83,14 +85,27 @@ TOPICS                            IMPORTANCE                                    
               iv.  Encapsulation:
                           Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of wrapping data and the methods that work on data within one unit, e.g., a class in Java. 
                           This concept is often used to hide the internal state representation of an object from the outside.
+                          **Encapsulation also leads to data abstraction or hiding. As using encapsulation also hides the data.
 
               v.   Polymorphism:
                           Polymorphism is the ability of data to be processed in more than one form.
-                          -> method Overloading
-                          -> method Overridding
+                          -> method Overloading (compile time)
+                          -> method Overridding (run time)
                           -> virtual Function
 
   (b) Approach: 
               Object-oriented programming (OOP) is nothing but that which 
               allows the writing of programs with the help of certain classes and real-time objects.
+
+  (c) Advantages: 
+              -> It models real world.
+              -> Programs are easy to understand and mantainable.
+              -> It offers code reusability.
+              -> Easier to test and manage code.
+
+  (d) Disadvantages:
+              -> Classes sometimes tend to be OVER-GENERALISED.
+              -> Relation among classes become superfacial.
+              -> It is tricky, so one need proper design and understanding before writing the code.
+
 
