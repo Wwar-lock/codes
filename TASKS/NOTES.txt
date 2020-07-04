@@ -1,8 +1,8 @@
 TOPICS                            IMPORTANCE                                    STATUS                 
 
 1.  DBMS                              HIGH                                     COMPLETED
-2.  OOM                               HIGH                                     IN PROGRESS...
-3.  OS                                MEDIUM
+2.  OOM                               HIGH                                     COMPLETED
+3.  OS                                MEDIUM                                   IN PROGRESS...
 4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
 5.  SOFTWARE MODELS                   MEDIUM 
 6.  COMPUTER ARHITECTURE              MEDIUM
