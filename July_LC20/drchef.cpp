@@ -65,6 +65,14 @@ signed main(){
       cnt+=(v.size());
       cout<<cnt<<el;
     }
+    else{
+      int cnt=0;
+      int d=0;
+      multiset<int>st;
+      rep(i,n){st.insert(v[i]);}
+      sort(all(v));
+      
+    }
 
   }
 

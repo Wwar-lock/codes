@@ -110,6 +110,24 @@ TOPICS                            IMPORTANCE                                    
 
 3. Operating System:
 
-  (a) 
-
+  (a) Basics: 
+             -> An Operating System acts as a communication bridge (interface) between the
+                user and computer hardware. The purpose of an operating system is to provide
+                a platform on which a user can execute programs in a convenient and efficient manner.
+             -> Types: Batch, Time sharing, real time, distributed, network operating systems.
+             -> Multiprogramming – A computer running more than one program at a time (like running Excel and Firefox simultaneously).
+                Multiprocessing – A computer using more than one CPU at a time.
+                Multitasking – Tasks sharing a common resource (like 1 CPU).
+                Multithreading is an extension of multitasking.
+             -> The major way in which multitasking differs from multi programming is that multi programming works solely on the concept of context switching 
+                whereas multitasking is based on time sharing alongside the concept of context switching.
+  
+  (b) System Structure: 
+             -> Kernel is the core part of an operating system which manages system resources. It also acts like a bridge between application and hardware of the computer. 
+                It is one of the first programs loaded on start-up (after the Bootloader).
+             -> The CPU can execute certain instruction only when it is in the kernel mode. These instruction are called privilege instruction. 
+             -> in a microkernel, the user services and kernel services are implemented in different address space. The user services are kept in user address space, 
+                and kernel services are kept under kernel address space, thus also reduces the size of kernel and size of operating system as well.
+             -> This kernel provides CPU scheduling, memory management, file management and other operating system functions through system calls.
+                As both services are implemented under same address space, this makes operating system execution faster.
 
