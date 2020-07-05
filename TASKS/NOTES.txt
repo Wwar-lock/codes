@@ -83,7 +83,8 @@ TOPICS                            IMPORTANCE                                    
                           -> User Level
 
               iv.  Encapsulation:
-                          Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It describes the idea of wrapping data and the methods that work on data within one unit, e.g., a class in Java. 
+                          Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). 
+                          It describes the idea of wrapping data and the methods that work on data within one unit, e.g., a class in Java. 
                           This concept is often used to hide the internal state representation of an object from the outside.
                           **Encapsulation also leads to data abstraction or hiding. As using encapsulation also hides the data.
 
@@ -131,3 +132,22 @@ TOPICS                            IMPORTANCE                                    
              -> This kernel provides CPU scheduling, memory management, file management and other operating system functions through system calls.
                 As both services are implemented under same address space, this makes operating system execution faster.
 
+  (c) CPU Scheduling:
+             -> A process is a program in execution.
+             -> The process of saving the context of one process and loading the context of another process is known as Context Switching.
+             -> A mode switch occurs when CPU privilege level is changed.
+             -> An I/O-bound process spends more time in the waiting state.
+             -> As the operating system supports multi-programming, it needs to keep track of all the processes. For this task,
+                the process control block (PCB) is used to track the process’s execution status
+             -> The process table is an array of PCB’s, that means logically contains a PCB for all of the current processes in the system.
+             -> Arrival Time: Time at which the process arrives in the ready queue.
+                Completion Time: Time at which process completes its execution.
+                Burst Time: Time required by a process for CPU execution.
+                Turn Around Time: Time Difference between completion time and arrival time.
+                Turn Around Time = Completion Time – Arrival Time
+                Waiting Time(W.T): Time Difference between turn around time and burst time.
+                Waiting Time = Turn Around Time – Burst Time
+          ** -> Convoy Effect is phenomenon associated with the First Come First Serve (FCFS) algorithm, 
+                in which the whole Operating System slows down due to few slow processes.
+          ** -> In Belady Anomaly, the number of page faults increase too much that it slows down the system. But this anmoly 
+                dont take place in LRU as it uses stack based algorithm.
