@@ -31,10 +31,9 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
-void printQ(priority_queue<int,vector<int>,greater<int>>pq){
-  while(!pq.empty()){
-    cout<<pq.top()<<" ";
-    pq.pop();
+void printV(vi v){
+  rep(i,v.size()){
+    cout<<v[i]<<" ";
   }
   cout<<el;
 }
@@ -53,30 +52,20 @@ signed main(){
   wl(t--){
     int n,x;
     cin>>n>>x;
-    priority_queue<int,vector<int>,greater<int>>pq;
-    rep(i,n){int tmp;cin>>tmp;pq.push(tmp);}
-    int cnt=0;
-    int base=2;
-    int tp,d;
-    // printQ(pq); 
-    // continue;
-    while(true){
-      // cout<<x<<el;
-      // printQ(pq);
-      if(pq.empty()){break;}
-      tp = pq.top();
-      d = tp-x;
-      if(2*d<tp){
-        // cnt++;
-        pq.pop();
-        if(d>0){
-          pq.push(2*d);
-        }
+    vi v(n);
+    rep(i,n){cin>>v[i];}
+    int mx = *max_element(all(v));
+    int mn = *min_element(all(v));
+    if(mx==mn){
+      int cnt=0;
+      while(x<mx){
+        x*=2;
+        cnt++;
       }
-      cnt++;
-      x*=base;
+      cnt+=(v.size());
+      cout<<cnt<<el;
     }
-    cout<<cnt<<el;
+
   }
 
   return 0;
