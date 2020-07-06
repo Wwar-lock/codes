@@ -166,4 +166,10 @@ TOPICS                            IMPORTANCE                                    
              -> Recovery metho: killing the process, resource preemption.
              -> Banker's algorithm.
       
-   (f) Processes and thread:    
+   (f) Processes and thread:   
+             -> Thread types: kernel ad user level.
+             -> Thread has program counter, register set, stack space.
+             -> Threads are not independent of each other.
+             -> Multi-threading Models.
+             -> Advantages: resposiveness, resource sharing, economy, scalability.
+             -> This state of the child process is known as the Zombie state. 
