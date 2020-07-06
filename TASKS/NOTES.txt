@@ -151,3 +151,19 @@ TOPICS                            IMPORTANCE                                    
                 in which the whole Operating System slows down due to few slow processes.
           ** -> In Belady Anomaly, the number of page faults increase too much that it slows down the system. But this anmoly 
                 dont take place in LRU as it uses stack based algorithm.
+
+  (d) Process Synchronisation: 
+             ->  Independent and cooperative processes.
+             ->  Race condition when more than 1 processes executing same code and accessing same memory.
+             ->  Critical section is a code segment that can be accessed by only one process at a time.
+             ->  3 conditions : mutual exclusion, progress, bound waiting.
+             ->  Peterson solution uses flag and turn to avoid deadlock.
+             ->  The repeated execution of a loop of code while waiting for an event to occur is called busy-waiting.
+             ->  Inter process communication (IPC) is a mechanism which allows processes to communicate with each other and synchronize their actions. 
+             
+   (e) Deadlock: 
+             -> Deadlock detection by reource allocation graph.
+             -> Recovery metho: killing the process, resource preemption.
+             -> Banker's algorithm.
+      
+   (f) Processes and thread:    

@@ -38,6 +38,14 @@ void printV(vi v){
   cout<<el;
 }
 
+void printQ(priority_queue<int,vector<int>,greater<int>>pq){
+  while(!pq.empty()){
+    cout<<pq.top()<<" ";
+    pq.pop();
+  }
+  cout<<el;
+}
+
 signed main(){
 #ifndef ONLINE_JUDGE
   freopen("input.txt","r", stdin);
@@ -67,19 +75,7 @@ signed main(){
     }
     else{
       int cnt=0;
-      vi l,g;
-      rep(i,n){
-        if(v[i]<x){l.pb(v[i]);}
-        else{g.pb(v[i]);}
-      }
-      sort(all(g));
-      // printV(g);
-      sort(all(l),greater<int>());
-      int counter=0;
-      // 1.priority_queue implementation for greater values of x :
-      // printV(l);
-      // cout<<cnt<<el;
-      cnt+=l.size();
+      
       cout<<cnt<<el;
     }
 
