@@ -4,7 +4,7 @@ TOPICS                            IMPORTANCE                                    
 2.  OOM                               HIGH                                     COMPLETED
 3.  OS                                MEDIUM                                   IN PROGRESS...
 4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
-5.  SOFTWARE MODELS                   MEDIUM 
+5.  SOFTWARE MODELS                   MEDIUM                                   IN PROGRESS...
 6.  COMPUTER ARHITECTURE              MEDIUM
 7.  NETWORKS                          HIGH
 8.  ARTIFICAL INTELLIGENCE            MEDIUM
@@ -195,5 +195,31 @@ TOPICS                            IMPORTANCE                                    
   (a) Objectives: Maintainability, Reusability, Correctness, Portability, Adaptibility.
 
   (b) Waterfall Model: 
-             ->
+             -> simpler and easier.
+             -> divides life into set of phases.
+             -> (sequential flow!!)one phase started after completion of previous phase.
+             -> phases:    feasibility studey, requirement analysis, design, coding, intergrity&testing.
+
+  (c) Iterative Waterfall Model: 
+             -> have feedback paths from every phase to its preceding phases.
+             -> Disadvantages: risk handling not supported, overlapping of phases not supported.
+
+  (d) Spiral Model: 
+             -> Support Risk Handling.
+             -> Each loop is phase of software development.
+             -> Radius represent cost of project.
+             -> Disadvantages: cost, time management difficulty, too much dependable on risk analysis.
+ 
+  (e) Incremental Model: 
+             -> first simple features added , then after successive iterations many other complex features are added.
+             -> Types: Staged, Parallel.
+             -> Advantages: low initial delievery cost, error reduction.
+             -> Disadvantages: total cost is not lower, requires good planning and design, well defined modules.
+
+  (f) RAD (Rapid application  development): 
+             -> The critical feature of this model is the use of powerful development tools and techniques.
+             -> A software project can be implemented using this model if the project can be broken down into small modules wherein each module can be assigned independently to separate teams.
+             -> Advantages: Feedback available at initial stages, reduced cost.
+             -> Disadvantages: powerful tools required skilled professionals, The systems which cannot be modularized suitably cannot use this model.
+
 
