@@ -161,12 +161,12 @@ TOPICS                            IMPORTANCE                                    
              ->  The repeated execution of a loop of code while waiting for an event to occur is called busy-waiting.
              ->  Inter process communication (IPC) is a mechanism which allows processes to communicate with each other and synchronize their actions. 
              
-   (e) Deadlock: 
+  (e) Deadlock: 
              -> Deadlock detection by reource allocation graph.
              -> Recovery metho: killing the process, resource preemption.
              -> Banker's algorithm.
       
-   (f) Processes and thread:   
+  (f) Processes and thread:   
              -> Thread types: kernel ad user level.
              -> Thread has program counter, register set, stack space.
              -> Threads are not independent of each other.
@@ -174,7 +174,7 @@ TOPICS                            IMPORTANCE                                    
              -> Advantages: resposiveness, resource sharing, economy, scalability.
              -> This state of the child process is known as the Zombie state.
 
-   (g) Memory Management: 
+  (g) Memory Management: 
              -> Memory Hierarchy is an enhancement to organize the memory such that it can minimize the access time. 
              -> Types of RAM: SRAM(Static RAM):cache , DRAM(Dynamic RAM):main memory
              -> Contigous memory -> fixed size and Variable size.
@@ -189,4 +189,11 @@ TOPICS                            IMPORTANCE                                    
                                      for every frame of main memory so one table shows paging info of all processes.
              -> 
 
+
+4. SOFTWARE MODELS: 
+  
+  (a) Objectives: Maintainability, Reusability, Correctness, Portability, Adaptibility.
+
+  (b) Waterfall Model: 
+             ->
 
