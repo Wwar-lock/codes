@@ -75,8 +75,29 @@ signed main(){
     }
     else{
       int cnt=0;
-      
-      cout<<cnt<<el;
+      sort(all(v));
+      // printV(v);
+      vector<int>::iterator curr,pre,last;
+      last = v.begin()+(v.size()-1);
+      pre=v.begin()-1;
+      while(true){
+        curr = upper_bound(all(v),x);
+        pre = curr-1;
+        if(pre>=last){
+          break;
+        }
+        // cout<<*pre<<" "<<x<<el;
+        if(pre>=v.begin()&&2*(*pre)>=x){
+          x = 2*(*pre);
+          v.erase(pre);
+          last = v.begin()+(v.size()-1);
+        }
+        else{
+          x*=2;
+        }
+        cnt++;
+      }
+      cout<<cnt+v.size()<<el;
     }
 
   }
