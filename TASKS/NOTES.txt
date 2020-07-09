@@ -4,7 +4,7 @@ TOPICS                            IMPORTANCE                                    
 2.  OOM                               HIGH                                     COMPLETED
 3.  OS                                MEDIUM                                   IN PROGRESS...
 4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
-5.  SOFTWARE MODELS                   MEDIUM                                   IN PROGRESS...
+5.  SOFTWARE MODELS                   MEDIUM                                   COMPLETED
 6.  COMPUTER ARHITECTURE              MEDIUM
 7.  NETWORKS                          HIGH
 8.  ARTIFICAL INTELLIGENCE            MEDIUM
@@ -221,5 +221,55 @@ TOPICS                            IMPORTANCE                                    
              -> A software project can be implemented using this model if the project can be broken down into small modules wherein each module can be assigned independently to separate teams.
              -> Advantages: Feedback available at initial stages, reduced cost.
              -> Disadvantages: powerful tools required skilled professionals, The systems which cannot be modularized suitably cannot use this model.
+
+  (g) Coupling and Cohesion: 
+             -> Design is iterative: (1)conceptual (2) technical.
+             -> low coupling is good. means low interdependence among various modules.
+             -> high cohesion is good. 
+             -> Modularization: Modularization is the process of dividing a software system into multiple independent modules 
+                where each module works independently. 
+             -> Cohesion is a measure of the degree to which the elements of the module are functionally related.
+
+  (h) COCOMO model: 
+             -> Model based on line of control.
+             -> key param: effort and schedule.
+             -> mathematical formaulas are used to calculate the cost.
+             -> different Phases: -> Planning and requirement,
+                                  -> system design,
+                                  -> detailed design,
+                                  -> module code and test,
+                                  -> integration and test,
+                                  -> cost constructive model.
+                                 
+  (i) Project size esimation techiques: 
+             -> lines of  code.
+             -> number of entities in ER diagram
+             -> total number of processes in detailed data flow diagram
+             -> function point analysis
+
+  (j) Quality of  good SRS: 
+             -> Correctness
+             -> completeness
+             -> consistency
+             -> unambiguous
+             -> ranking for importance
+             -> design interdependence
+             -> Testability 
+
+  (k) Selenium: 
+             -> Selenium is an automation tool and portable software testing tool for web applications.
+
+   (l) Testing: 
+            -> Black Box: functionality of software is unknown. it can be done in following ways:
+                  -> syntax driven testing.
+                  -> equivalence partitioning
+                  -> boundary value analysis.
+                  -> requirement based testing
+                  -> compatibility testing
+            -> White Box: To amalyze internal Structures.   
+                  -> statement coverage.
+                  -> branch coverage
+                  -> condition coverage
+                  ->cyclomatic complexity
 
 
