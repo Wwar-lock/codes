@@ -295,5 +295,8 @@ TOPICS                            IMPORTANCE                                    
              -> Topologies: mesh,star,bus,ring,tree.
              -> TCP/IP model: 4 layers(Application, Transport, internet, network/link).
              -> OSI Model: 7 layers(physical,data,network,transpot,application,session,presentation).
-             -> HTTPS is secure with secure socket layer, HTTP (hypertext transfer protocol) 
+             -> HTTPS is secure with secure socket layer, HTTP (hypertext transfer protocol).
+             -> Local Internetworking is one which is within the same organization.
+             -> Bridges are a data link layer device and can connect to different networks as well as connect different networks of different types.
+             
             
