@@ -274,5 +274,26 @@ TOPICS                            IMPORTANCE                                    
 
 5. Computer Networks: 
 
-  (a)
-
+  (a) Basics: 
+             -> open and closed system.
+             -> OSI (open system interconnection).
+             -> IP address(logical address)
+             -> MAC address(physical address)
+             -> Domain Name Server. (translates web addresses into corresponding IP addresses.)
+             -> ARP (address resolution protocol): used to convert ip address to identify mac address of user machine.
+             -> RARP (reverse address resolution protocol.) 
+             -> URL (unifrom resource locator.)
+             -> GET: requesting some data from server.
+             -> connections: p2p and multipoint(multiple devices sharing same link).
+             -> Transmission Modes: simple(unidirectional communication), 
+                                    half-duplex(bi-directional but dont recieve/transmit at same time), 
+                                    full-duplex(bi-directional and also recieve/transmit at same time).
+             -> Types of Transmission Media: guided(twisted pair,optical fibre), unguided(radio waves,infrared).
+             -> Unicast: data transfer where single sender and single reciever.
+             -> BroadCast: one to all, 
+             -> Multicast: Class D is reserved for this, other protocols are also needed  like IGMP(internet grp management protocol.)
+             -> Topologies: mesh,star,bus,ring,tree.
+             -> TCP/IP model: 4 layers(Application, Transport, internet, network/link).
+             -> OSI Model: 7 layers(physical,data,network,transpot,application,session,presentation).
+             -> HTTPS is secure with secure socket layer, HTTP (hypertext transfer protocol) 
+            
