@@ -13,7 +13,7 @@
 #define all(v) v.begin(),v.end()
 #define pii pair<int,int>
 #define pll pair<long long, long long>
-#define mod 998244353
+#define mod 1000000007
 #define inf 1000000000000000001
 #define mp(x,y) make_pair(x,y)
 #define mem(a,val) memset(a,val,sizeof(a))
@@ -31,21 +31,10 @@
 #define REPD(i,n) for (int i = n-1; i >= 0; i--)
 using namespace std;
 
-map<string,int>op;
-
-bool cmp(string &a,string &b){
-  if(a.size()==b.size()){
-    return a<b;
-  }
-  return a.size()<b.size();
-}
-
 set<string>generateAllSubstrings(string s){
   set<string>st;
   for(int i=0;i<s.size();i++){
     for(int j=1;j<=s.size()-i;j++){
-      // vs.pb(s.substr(i,j));
-      op[s.substr(i,j)]++;
       st.insert(s.substr(i,j));
     }
   }
@@ -58,41 +47,6 @@ void printS(set<string>st){
   }
 }
 
-void printV(vector<string>vs){
-  rep(i,vs.size()){
-    cout<<vs[i]<<el;
-  }
-}
-
-void printM(map<string,int>mp){
-  for(auto it=mp.begin();it!=mp.end();it++){
-    cout<<it->ff<<" "<<it->ss<<el;
-  }
-}
-
-int modInv(int a,int m){
-  int m0 = m;
-  int y=0,x=1;
-  if(m==1){
-    return 0;
-  }
-  while(a>1){
-    int q = a/m;
-    int t = m;
-    m = a%m;
-    a=t;
-    t=y;
-
-    y = x-q*y;
-    x=t;
-
-  }
-  if(x<0){
-    x+=m0;
-  }
-  return x;
-}
-
 signed main(){
 #ifndef ONLINE_JUDGE
   freopen("input.txt","r", stdin);
@@ -102,36 +56,27 @@ signed main(){
   ios::sync_with_stdio(false);
   cin.tie(0), cout.tie(0);
 
-  int t;
-  cin>>t;
-  wl(t--){
+  int n;
+  cin>>n;
+  set<string>st;
+  rep(i,n){
     string s;
     cin>>s;
-    set<string>st;
-    vector<int>v(26);
-    rep(i,26){cin>>v[i];}
-    map<string,int>wp;
-    st = generateAllSubstrings(s);
-    vector<string>vs;
-    for(auto it=st.begin();it!=st.end();it++){
-      string tmp = *it;int w=0;
-      for(int i=0;i<tmp.size();i++){
-        w+=v[tmp[i]-'a'];
-      }
-      wp[tmp]=w;
-      vs.pb(tmp);
-    }
-    int n = s.size();
-    int total = (n*(n+1))/2;
-    // printS(st);
-    sort(all(vs),cmp);
-    printV(vs);
-
-    
-
-    int m = modInv(total,mod);
-    // cout<<(ans*m)%mod<<el;
+    st.insert(s);
   }
+  // printS(st);
+  int sz;
+  cin>>sz;
+  string s;cin>>s;
 
+  set<string>szt = generateAllSubstrings(s);
+  // printS(szt);
+  int cnt=0;
+  for(auto it = szt.begin();it!=szt.end();it++){
+    if(st.find(*it)!=st.end()){
+      cnt++;
+    }
+  }
+  cout<<cnt<<el;
   return 0;
 }
