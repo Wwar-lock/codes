@@ -328,5 +328,9 @@ TOPICS                            IMPORTANCE                                    
              -> Diff b/w Transmission and communication:
                      Transmission: data is transfered in one way.
                      communication: process of sending and recieving data (both way).
-             -> Brouter: Bridge + Router.      
+             -> Brouter: Bridge + Router.
+             -> Static IP:  When a device or computer is assigned a specified IP address then it is named as Static IP. It is assigned by the Internet Service Provider as a permanent address.
+             -> Dynamic IP: Dynamic IP is the temporary IP address assigned by the network to a computing device. Dynamic IP is automatically assigned by the server to the network device.
+             -> Beaconing: If a device in the network is facing any problem, then it notifies the other devices that they are not receiving any signal. Likewise, the problem gets repaired within the network.
+             -> SLIP stands for Serial Line Interface Protocol. SLIP is a protocol used for transmitting IP datagrams over a serial line.      
       
