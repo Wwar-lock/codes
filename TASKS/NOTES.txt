@@ -323,5 +323,10 @@ TOPICS                            IMPORTANCE                                    
                      The idea of DHCP (Dynamic Host Configuration Protocol) is to enable devices to get IP address without any manual configuration.
                      The device sends a broadcast message saying “I am new here”
              -> DNS (internet phonebook)
-             -> IPv4 has 5 classes (A,B,C,D,E).      
+             -> IPv4 has 5 classes (A,B,C,D,E). 
+             -> Types of Networks: LAN,MAN,WAN.
+             -> Diff b/w Transmission and communication:
+                     Transmission: data is transfered in one way.
+                     communication: process of sending and recieving data (both way).
+             -> Brouter: Bridge + Router.      
       
