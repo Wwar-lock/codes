@@ -6,7 +6,7 @@ TOPICS                            IMPORTANCE                                    
 4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
 5.  SOFTWARE MODELS                   MEDIUM                                   COMPLETED
 6.  COMPUTER ARHITECTURE              MEDIUM
-7.  NETWORKS                          HIGH                                     IN PROGRESS...
+7.  NETWORKS                          HIGH                                     COMPLETED
 8.  ARTIFICAL INTELLIGENCE            MEDIUM
 9.  DESIGN ALGORITHMS                 HIGH                                     COMPLETED
 10. Distributed Systems               HIGH
