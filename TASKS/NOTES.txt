@@ -334,3 +334,42 @@ TOPICS                            IMPORTANCE                                    
              -> Beaconing: If a device in the network is facing any problem, then it notifies the other devices that they are not receiving any signal. Likewise, the problem gets repaired within the network.
              -> SLIP stands for Serial Line Interface Protocol. SLIP is a protocol used for transmitting IP datagrams over a serial line.      
       
+6. ARTIFICAL INTELLIGENCE: 
+
+   (a) Diff b/w AI,ML and Deep Learning: 
+             -> AI: simulated intelligence in machines, biggest
+             -> ML: practice of getting machine to make decissions, subset of AI
+             -> Deep Learning: artifical neural network to solve complex problems, subset of ML
+         
+   (b) Types of AI:
+             -> Reactive machine AI, Limited memory AI(self-driving cars), theory of mind AI
+
+   (c) Types of Machine learnings: 
+             -> Supervised: machine learns using labelled data
+             -> Unsupervised: machine trained on unlabelled data without guidance
+             -> Reinforcement: agent interacts with environment and produce rewards of actions.
+
+   (d) Artifical neural networks: 
+             -> FeedForward: input travels in one direction, may or maynot have hidden layers.
+             -> CNN: input features are taken in batch wise like filter, so remember image in parts and do operations on it.
+             -> RNN: saving the output layer and  feeding this back to the input to help in predicting the outcome of the layer.
+             -> Bayesian Networks: A Bayesian network is a statistical model that represents a set of variables and their conditional dependencies in the form of a directed acyclic graph. 
+             -> Turing Test: In artificial intelligence (AI), a Turing Test is a method of inquiry for determining whether or not a computer is capable of thinking like a human being.
+            
+   (e) Intermediate level Questions: 
+             -> Markov decission process:  The mathematical approach for mapping a solution in Reinforcement Learning is called Markov’s  Decision Process (MDP). .
+             -> Explorations: like the name suggests, is about exploring and capturing more information about an environment.
+             -> Exploitations: is about using the already known exploited information to heighten the rewards.
+             -> Hyperparameters: yperparameters are variables that define the structure of the network. Number of hidden layers.
+             -> Overfitting:  Overfitting occurs when a statistical model or machine learning algorithm captures the noise of the data. This causes an algorithm to show low bias but high variance in the outcome.
+             -> Dropout is a type of regularization technique used to avoid overfitting in a neural network. It is a technique where randomly selected neurons are dropped during training.
+             -> Keras is an open source neural network library written in Python. It is designed to enable fast experimentation with deep neural networks.
+             -> TensorFlow is an open-source software library for dataflow programming. It is used for machine learning applications like neural networks.
+             -> PyTorch is an open source machine learning library for Python, based on Torch. It is used for applications such as natural language processing.
+             -> Stemming algorithms work by cutting off the end or the beginning of the word, taking into account a list of common prefixes and suffixes that can be found in an inflected word.
+             -> Lemmatization, on the other hand, takes into consideration the morphological analysis of the words.
+             -> Minimax is a recursive algorithm used to select an optimal move for a player assuming that the other player is also playing optimally.
+             -> A* is a computer algorithm that is extensively used for the purpose of finding the path or traversing a graph in order to find the most optimal route between various points called the nodes.
+             -> Ensemble learning is a computational technique in which classifiers or experts are strategically formed and combined. 
+             -> F1 score is the weighted average of precision and recall. It considers both false positive and false negative values into account. It is used to measure a model’s performance.
+             -> An autoencoder is basically used to learn a compressed form of the given data. Image colourisation and image reconstruction.
