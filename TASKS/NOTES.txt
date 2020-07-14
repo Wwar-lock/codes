@@ -7,7 +7,7 @@ TOPICS                            IMPORTANCE                                    
 5.  SOFTWARE MODELS                   MEDIUM                                   COMPLETED
 6.  COMPUTER ARHITECTURE              MEDIUM
 7.  NETWORKS                          HIGH                                     COMPLETED
-8.  ARTIFICAL INTELLIGENCE            MEDIUM
+8.  ARTIFICAL INTELLIGENCE            MEDIUM                                   IN PROGRESS...
 9.  DESIGN ALGORITHMS                 HIGH                                     COMPLETED
 10. Distributed Systems               HIGH
 
