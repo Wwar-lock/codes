@@ -1,4 +1,8 @@
-NO
-YES
-YES
-NO
+8
+aaaabbbb
+20
+aaaaaaaaaabbbbbbbbbb
+30
+aaaaaaaaaaaaaaabbbbbbbbbbbbbbb
+120
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb

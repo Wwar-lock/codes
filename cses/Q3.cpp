@@ -46,14 +46,14 @@ signed main(){
   wl(t--){
     int n;
     cin>>n;
-    list<int>*adj;
-    adj = new list<int>[n+1];
+    cout<<2*n<<el;
     rep(i,n){
-      int a,b;
-      cin>>a>>b;
-      adj[a].pb(b);
-      adj[b].pb(a);
-    } 
+      cout<<'a';
+    }
+    rep(i,n){
+      cout<<'b';
+    }
+    cout<<el;
   }
 
   return 0;
