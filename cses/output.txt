@@ -1,8 +1,4 @@
-8
-aaaabbbb
-20
-aaaaaaaaaabbbbbbbbbb
-30
-aaaaaaaaaaaaaaabbbbbbbbbbbbbbb
-120
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+4 5
+4 8
+4 9
+1
