@@ -48,7 +48,7 @@ signed main(){
     int n;cin>>n;
     vt<int>v(n);
     rep(i,n){cin>>v[i];}
-    int l=1,r=4;
+    int l=1,r=4;Wwa
     for(int i=1;i<n;i++){
       if(v[i]>v[i-1]){
         l+=1;
