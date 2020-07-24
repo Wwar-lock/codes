@@ -49,7 +49,25 @@ void printList(list<pair<int,int>>*adj,int n){
   }
 }
 
+void countPathUtilFunction(list<int>*adj,int s,int d,int *count){
+  if(s==d){
+    *count+=1;
+  }
+  else{
+    for(auto it=adj[u].begin();it!=adj[u].end();it++){
+      countPathUtilFunction(adj,*it,d,count);
+    }
+  }
+}
+
+int countNumberofPaths(list<int>*adj,int s,int d){
+  int count=0;
+  countPathUtilFunction(adj,s,d,&count);
+  return count;
+}
+
 void dijkstra(list<pair<int,int>> *adj,int source,int n){
+  // O(ElogV)
   // printMatrix(adj);
   priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
   vector<int>dist(n,MAX);
@@ -133,36 +151,35 @@ signed main(){
   cin>>n;
 
   // whether path exist or not ;
-  vector<vector<int>>v(n,vector<int>(n,0));
-  for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
-      int num;
-      cin>>num;
-      v[i][j]=num;
-    }
-  }
+  // vector<vector<int>>v(n,vector<int>(n,0));
+  // for(int i=0;i<n;i++){
+  //   for(int j=0;j<n;j++){
+  //     int num;
+  //     cin>>num;
+  //     v[i][j]=num;
+  //   }
+  // }
   // 3 0 0 0
   // 0 3 3 0
   // 0 1 0 3
   // 0 2 3 3
-  if(whetherPathExists(v)){
-    cout<<"Yes\n";
-  }
-  else{
-    cout<<"No\n";
-  }
-  // vector<vector<int>>adj(n,vector<int>(n,0));
-  // list<pair<int,int>>*adj;
-  // adj = new list<pair<int,int>>[n];
-  // memset(adj,0,sizeof(adj));
-  // int m;
-  // cin>>m;
-  // rep(i,m){
-  //   int a,b,w;
-  //   cin>>a>>b>>w;
-  //   adj[a].pb({b,w});
-  //   adj[b].pb({a,w});
+  // if(whetherPathExists(v)){
+  //   cout<<"Yes\n";
   // }
+  // else{
+  //   cout<<"No\n";
+  // }
+  list<pair<int,int>>*adj;
+  adj = new list<pair<int,int>>[n];
+  memset(adj,0,sizeof(adj));
+  int m;
+  cin>>m;
+  rep(i,m){
+    int a,b,w;
+    cin>>a>>b>>w;
+    adj[a].pb({b,w});
+    adj[b].pb({a,w});
+  }
   // printMatrix(adj);
   // by using adjacency matrix complexity is much hiher
   // so we use list instead of 2d matrix
