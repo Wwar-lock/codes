@@ -5,14 +5,14 @@ TOPICS                            IMPORTANCE                                    
 3.  OS                                MEDIUM                                   IN PROGRESS...
 4.  DATA STRUCTURES                   HIGH                                     C0MPLETED     
 5.  SOFTWARE MODELS                   MEDIUM                                   COMPLETED
-6.  COMPUTER ARHITECTURE              MEDIUM
+6.  COMPUTER ARHITECTURE              MEDIUM                                   NOT ENOUGH
 7.  NETWORKS                          HIGH                                     COMPLETED
 8.  ARTIFICAL INTELLIGENCE            MEDIUM                                   IN PROGRESS...
 9.  DESIGN ALGORITHMS                 HIGH                                     COMPLETED
 10. Distributed Systems               HIGH
 
 -----------------------------------------
-1. PROJECTS AND GITHUB
+1. PROJECTS AND GITHUB                                                         STARTING...
 2. PRE-PREPARED ANSWERS
 -----------------------------------------
 
