@@ -1,0 +1,33 @@
+1. Student Portal: 
+         -> This is Java based application. The application provides interaction among students and 
+           teachers.
+         -> On this application teachers upload student marks of various subjects and also students can
+           submit their feedbacks to the scores and request for rechecking also.
+         -> Proper functionalites to all stakeholders and permissions are given based on their roles.
+         -> All frontend and backend is on java.
+
+2. Offline Quiz Software: 
+         -> This is Java Based project, where all backend and frontend is completed using java.
+         -> This provides a platform to take mcq quizzes where teacher/professor upload questions and answers in
+           backend and after test completion the software provides marks obtained by all students in a list format.
+         -> Marks scheme and question pattern can be alterated by professor.
+
+3. Matrimonial Website:
+         -> This is a group project based on database mangement system.
+         -> Here we work on mysql and nodejs.
+         -> we built static webpages and run over node js servers.
+         -> We see huge advancement in this project further in future.
+
+4. Book Recommendation: 
+         -> This is our 5th semster course project where we have to make a recmmendation system
+            using prolog language. As language was allocated by the professor.
+         -> GUI is again made in Java.
+         -> Prolog is logic programming language.
+         -> Knowledge Base , Inference Engine are parts of prolog.
+
+5. Medical Healhcare App:
+         -> Reminder system app.
+         -> Perform alarm using intent property and startActivity.
+         -> create api keyto find nearby hospitals.
+         -> maintain log of patients medication.
+         -> layout and activity are two important aspects.

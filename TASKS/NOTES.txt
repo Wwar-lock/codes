@@ -13,7 +13,7 @@ TOPICS                            IMPORTANCE                                    
 
 -----------------------------------------
 1. PROJECTS AND GITHUB                                                         STARTING...
-2. PRE-PREPARED ANSWERS
+2. PRE-PREPARED A NSWERS
 -----------------------------------------
 
 1. DataBase Management System: 
