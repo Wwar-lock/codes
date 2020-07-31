@@ -28,6 +28,10 @@
 5. Medical Healhcare App:
          -> Reminder system app.
          -> Perform alarm using intent property and startActivity.
-         -> create api keyto find nearby hospitals.
+         -> create api key to find nearby hospitals.
          -> maintain log of patients medication.
-         -> layout and activity are two important aspects.
+         -> layout and activity are two important aspects.  
+         -> Rest API transfer state of data.
+
+6. Remote Procedure Call: 
+         -> 
