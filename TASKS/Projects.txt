@@ -34,4 +34,22 @@
          -> Rest API transfer state of data.
 
 6. Remote Procedure Call: 
-         -> 
+         -> Creating APIs are more difficult than creating RPC. Many factors are taken into consideration in the 
+            development of RPC.
+         -> 5 parts: client, client stub, transport channel, server stub and server.
+         -> gRPC is hot topic (language independent) , protocol buffers.
+
+7. Neural Style Transfer: 
+         -> uses class of deep learning which is called as CNN;
+         -> CNN is process visual information hierarchially in feed-forward manner;
+         -> on higher layers of network it studied about more technical advance feature of image;
+         -> each layer of it can be considered as a filter;
+         -> 4_2 is used as content extractor;
+         -> we perform correlation b/w different filter responses to obtain texture information not global arrangement;
+         -> these correlation are used as gram matrix.
+         -> key: we can separate syle and content of image.
+         ->  Max pooling is done to in part to help over-fitting by providing an abstracted form of the representation. 
+            As well, it reduces the computational cost by reducing the number of parameters to learn and provides basic translation invariance to the internal representation. 
+
+8. Reinforcement learning on OpenAI games:
+         -> Actor critic: 
